@@ -1,0 +1,67 @@
+.landingPage {
+  width: 100%; 
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+
+.header {
+  height: 100px;
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; 
+  background-color: #3a3a3a;
+  margin-bottom: 1px;
+}
+
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+
+.nav button {
+  margin-left: 10px; 
+}
+
+
+.body {
+  flex: 1; 
+  height: 100%;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3a3a3a;
+}
+
+
+.intro_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.intro_card img {
+  max-width: 35%;
+}
+
+
+.get_started {
+  margin-top: 20px; 
+  height: 70px;
+  width: 300px; 
+}
+
+.get_started a {
+  text-decoration: none;
+  color: black;
+}
