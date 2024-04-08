@@ -1,16 +1,19 @@
 import './Home.css'
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchWorkouts } from '../../store/actions/workoutsActions';
 import Modal from "../modal/modal";
 import dragonHead from '../../assets/dragon head.png';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const user = useSelector(({ auth }) => auth.user);
-  console.log('KKKKKKKKKKKKKKKKKKKKKKKKK', user)
-  const handleWorkout = (props) => {
-    console.log(props)
-  }
+
+  const dispatch = useDispatch();
+
+  const handleWorkout = (tableName) => {
+        dispatch(fetchWorkouts(tableName));
+    };
 
   const handleShowModal = () => {
     setShowModal(true);
@@ -33,9 +36,9 @@ const Home = () => {
         <div className="title">Workout Generator</div>
         <div className="generator">
           <div className="button_container">
-            <button onClick={() => handleWorkout('1')}>Bodybuilding</button>
-            <button onClick={() => handleWorkout('2')}>Powerlifting</button>
-            <button onClick={() => handleWorkout('3')}>Cardio</button>
+          <button onClick={() => handleWorkout('bodybuilding')}>Bodybuilding</button>
+          <button onClick={() => handleWorkout('powerlifting')}>Powerlifting</button>
+          <button onClick={() => handleWorkout('cardio')}>Cardio</button>
           </div>
           <div className="table_container">Table</div>
         </div>

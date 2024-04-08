@@ -17,10 +17,10 @@ const db = {};
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-db.cart = require('./cart.model')(sequelize, Sequelize);
-db.checkout = require('./checkout.model')(sequelize, Sequelize);
-db.product = require('./product.model')(sequelize, Sequelize);
+
 db.user = require('./user.model')(sequelize, Sequelize);
-db.workouts = require('./workouts.model')(sequelize, Sequelize);
+db.bodybuilding = require('./bodybuilding.model')(sequelize, Sequelize);
+db.powerlifting = require('./powerlifting.model')(sequelize, Sequelize);
+db.cardio = require('./cardio.model')(sequelize, Sequelize);
 
 module.exports = db;

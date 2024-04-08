@@ -21,13 +21,10 @@ app.use(bodyParser.json({ limit: '50mb' }));
 
 // Your existing routes
 // app.use('/login', require('./routes/login'));
-app.use('/cart', require('./routes/cart'));
-app.use('/checkout', require('./routes/checkout'));
-app.use('/orders', require('./routes/orders'));
-app.use('/products', require('./routes/products'));
 app.use('/registration', require('./routes/registration'));
 app.use('/user', require('./routes/user'));
 app.use('/auth', require('./routes/auth'));
+app.use('/workouts', require('./routes/workouts'));
 
 // // Start the server
 // app.listen(port, () => {

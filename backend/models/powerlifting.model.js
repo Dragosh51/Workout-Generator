@@ -1,12 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
     return sequelize.define(
-        "workouts",
+        "powerlifting",
         {
-            type: {
-                type: DataTypes.INTEGER,
-                allowNull: false,
+            day: {
+                type: DataTypes.STRING,
+                // allowNull: false,
                 primaryKey: true,
-                autoIncrement: true,
             },
             exercise: {
                 type: DataTypes.STRING,
@@ -14,21 +13,18 @@ module.exports = (sequelize, DataTypes) => {
             },
             setsAndReps: {
                 type: DataTypes.STRING(60),
-                allowNull: false,
-                comment: "null",
+                // allowNull: false,
             },
             intensity: {
-                type: DataTypes.FLOAT(7),
-                allowNull: false,
-                primaryKey: true,
-                comment: "null",
+                type: DataTypes.STRING,
+                // allowNull: false,
             },
         },
         {
             timestamps: false,
         },
         {
-            tableName: "workouts",
+            tableName: "powerlifting",
         }
     );
 };
