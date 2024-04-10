@@ -26,13 +26,13 @@ app.use('/user', require('./routes/user'));
 app.use('/auth', require('./routes/auth'));
 app.use('/workouts', require('./routes/workouts'));
 
-// // Start the server
-// app.listen(port, () => {
-//     console.log(`Server is running on http://localhost:${port}`);
-// });
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
 
-db.sequelize
-.sync()
-.then(() =>
-  app.listen(port, () => console.log(`Server listening on port ${port}`))
-); 
+// db.sequelize
+// .sync({ force: true })
+// .then(() =>
+//   app.listen(port, () => console.log(`Server listening on port ${port}`))
+// ); 

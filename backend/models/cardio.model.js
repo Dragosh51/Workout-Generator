@@ -2,20 +2,33 @@ module.exports = (sequelize, DataTypes) => {
     return sequelize.define(
         "cardio",
         {
+            cardioID: {
+                autoIncrement: true,
+                type: DataTypes.INTEGER,
+                allowNull: false,
+                primaryKey: true
+            },
             day: {
                 type: DataTypes.STRING,
                 // allowNull: false,
-                primaryKey: true,
             },
             exercise: {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
-            setsAndReps: {
+            sets: {
+                type: DataTypes.STRING(60),
+                // allowNull: false,
+            },
+            reps: {
                 type: DataTypes.STRING(60),
                 // allowNull: false,
             },
             intensity: {
+                type: DataTypes.STRING,
+                // allowNull: false,
+            },
+            rir: {
                 type: DataTypes.STRING,
                 // allowNull: false,
             },
